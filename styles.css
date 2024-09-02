@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#weather-container {
+  color: white;
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#location-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#location-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#location-input::placeholder {
+  color: #e0e0e0;
+  opacity: 0.8;
+}
+
+#location-input:focus {
+  border-color: #ff7e5f;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #ff7e5f;
+  transform: translateY(1px);
+}
+
+#weather-data {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+  #location-input {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #weather-container {
+    padding: 1.5rem;
+  }
+
+  #weather-data {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  #location-input {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #weather-container {
+    padding: 1rem;
+  }
+
+  #weather-data {
+    font-size: 1rem;
+  }
+}
