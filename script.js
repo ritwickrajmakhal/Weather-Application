@@ -7,7 +7,7 @@ function getWeather(e) {
   const appid = "9ea95d7f67afd651695170a2a32e68cb"; // Your API key
   const weatherData = document.getElementById("weather-data");
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=metric`
   )
     .then((res) => {
       if (!res.ok) {
